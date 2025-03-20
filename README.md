@@ -26,7 +26,8 @@ pip install -r requirements.txt
 
 python scripts/spark_preprocessing.py
 ```
-# Data Processing Steps
+---
+## Data Processing Steps
 Step 1: Load Raw Data
 - Reads NYC taxi trip data from Parquet format
 - Loads it into a PySpark DataFrame
@@ -42,3 +43,6 @@ Step 3: Outlier Removal
 
 Step 4: Save Cleaned Data
 - Saves the processed DataFrame back into Parquet format
+---
+### Next Steps
+Add real-time data ingestion using Kafka
