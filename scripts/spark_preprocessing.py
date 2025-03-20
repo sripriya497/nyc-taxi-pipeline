@@ -43,4 +43,9 @@ if __name__ == "__main__":
     df = clean_data(df)
     df = aggregate_data(df)
     df = remove_outliers(df)
+
+    output_path = "data/clean_taxi_data.parquet"
+    df.write.mode("overwrite").parquet(output_path)
+    print("Data saved to parquet file", output_path)
+    read_data(spark,output_path).show(5)
     spark.stop()
